@@ -2,3 +2,8 @@ button {
     height: 50px;
     width: 50px;
 }
+
+.replay-button {
+    width: 100px;
+    margin-bottom: 15px;
+}
