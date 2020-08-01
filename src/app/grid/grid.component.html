@@ -1,0 +1,27 @@
+<table>
+
+    <tr>
+
+        <td><button>⬇️</button></td>
+        <td><button>⬇️</button></td>
+        <td><button>⬇️</button></td>
+        <td><button>⬇️</button></td>
+        <td><button>⬇️</button></td>
+        <td><button>⬇️</button></td>
+        <td><button>⬇️</button></td>
+        <td><button>⬇️</button></td>
+
+    </tr>
+    
+    <tr *ngFor="let row of board">
+
+        <td *ngFor="let item of row">
+            
+            <button>{{ item }}</button>
+
+        </td>
+
+    </tr>
+
+</table>
+
