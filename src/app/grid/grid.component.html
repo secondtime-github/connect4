@@ -10,28 +10,16 @@
 
 
 <table>
-
-    <tr>
-
-        <td><button (click)="add(0)" [disabled]="board[0][0]">⬇️</button></td>
-        <td><button (click)="add(1)" [disabled]="board[0][1]">⬇️</button></td>
-        <td><button (click)="add(2)" [disabled]="board[0][2]">⬇️</button></td>
-        <td><button (click)="add(3)" [disabled]="board[0][3]">⬇️</button></td>
-        <td><button (click)="add(4)" [disabled]="board[0][4]">⬇️</button></td>
-        <td><button (click)="add(5)" [disabled]="board[0][5]">⬇️</button></td>
-        <td><button (click)="add(6)" [disabled]="board[0][6]">⬇️</button></td>
-
+    <tr >
+        <td *ngFor="let idx of board[0]; index as i">
+            <button (click)="add(i)" [disabled]="board[0][i] || winner">⬇️</button>
+        </td>
     </tr>
     
     <tr *ngFor="let row of board">
-
         <td *ngFor="let item of row">
-            
             <button>{{ item }}</button>
-
         </td>
-
     </tr>
-
 </table>
 
